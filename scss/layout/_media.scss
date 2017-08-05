@@ -6,21 +6,56 @@
 }
 
 @media screen and (max-width: 1200px) {
-	
+  .wrapper {
+    width: 1024px;
+  }
+  @for $i from 1 through 12 {
+    .standart-#{$i} {
+      width: 8.333% * $i;
+      float: left;
+    }
+  }
 }
 
 @media screen and (min-width: 992px){
-	
+
 }
 
 @media screen and (max-width: 991px) {
-	
+  .wrapper {
+    width: 750px;
+  }
+  @for $i from 1 through 12 {
+    .medium-#{$i} {
+      width: 8.333% * $i;
+      float: left;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-	
+
 }
 
 @media screen and (max-width: 767px) {
-	
+  .wrapper {
+    width: 100%;
+  }
+  @for $i from 1 through 12 {
+    .small-#{$i} {
+      width: 8.333% * $i;
+      float: left;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 480px) {
+  @for $i from 1 through 12 {
+    .xsmall-#{$i} {
+      width: 8.333% * $i;
+      float: left;
+    }
+  }
 }
