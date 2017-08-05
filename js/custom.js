@@ -84,8 +84,17 @@ $(function(){
 	*/
 	
 	/* components */
-	
-	
+
+	$('.main-menu li a').on('click', function (event) {
+		event.preventDefault();
+	});
+
+	// Toogle Main Menu
+	$('.main-menu .category').on('click', function() {
+		$('.toogle-menu').toggleClass('expended');
+	});
+
+	$('.slider').slick();
 
 });
 
@@ -106,6 +115,5 @@ var handler = function(){
 }
 $(window).bind('load', handler);
 $(window).bind('resize', handler);
-
 
 

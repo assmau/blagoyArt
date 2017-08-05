@@ -79,7 +79,68 @@ h3{
     -webkit-order: 2;
 	flex-grow: 1;
     -webkit-flex-grow: 1;
-	background: #fff000;
+	margin: 20px 0;
+	//background: #fff000;
+	.wrapper {
+		padding: 0;
+	}
+
+	.slider {
+		.slick-arrow {
+			font-size: 0;
+			line-height: 0;
+			position: absolute;
+			top: 50%;
+			display: block;
+			width: 35px;
+			height: 130px;
+			padding: 0;
+			-webkit-transform: translate(0, -50%);
+			-ms-transform: translate(0, -50%);
+			transform: translate(0, -50%);
+			cursor: pointer;
+			color: transparent;
+			border: none;
+			outline: none;
+			background: #c9a45f;
+		}
+		.slick-prev {
+			left: 0;
+			z-index: 99;
+			&:before {
+				content: '';
+				width: 18px;
+				height: 30px;
+				background: url(../img/slick-arrows.png) 0 0;
+				display: inline-block;
+			}
+		}
+		.slick-next {
+			right: 0;
+			z-index: 99;
+			&:before {
+				content: '';
+				width: 18px;
+				height: 30px;
+				background: url(../img/slick-arrows.png) 18px 0;
+				display: inline-block;
+			}
+		}
+		.description {
+			position: absolute;
+			top: 80px;
+			width: 550px;
+			margin-left: 60px;
+			padding: 3px 30px;
+			background: rgba(210, 166, 107, 0.9);
+
+			p {
+				font-size: 40px;
+				color: #fff;
+				line-height: 45px;
+			}
+		}
+	}
 }
 
 

@@ -14,6 +14,7 @@ header{
     -webkit-order: 1;
 
 	.logo {
+		padding: 35px 0 25px 0;
 		a {
 			span {
 				font-size: $base-font-size;
@@ -25,11 +26,12 @@ header{
 	}
 
 	.search {
+		padding: 32px 15px 0 0;
 		.form-search {
 			position: relative;
 			input {
 				border: 1px solid #b9b8bd;
-				padding:10px 15px;
+				padding: 12px 15px;
 				@include radius(4px);
 				position: relative;
 				width:100%;
@@ -47,23 +49,46 @@ header{
 		}
 	}
 
+	.contact {
+		padding:35px 0;
+		text-align: right;
+		.contact-number {
+			font-size: 20px;
+			font-weight: normal;
+			padding: 5px 10px;
+			a {
+				color: #181616;
+			}
+		}
+		.support {
+			span {
+				color: #cb944c;
+				line-height: 17px;
+				font-size: 14px;
+				&:last-child {
+					color: #2b3056;
+				}
+			}
+		}
+	}
+
 	.nav {
-		margin:20px 0;
 		border-top: 1px solid $border-color;
 		border-bottom: 1px solid $border-color;
+		padding:10px 0;
 		.main-menu {
 			li {
 				display: inline-block;
+				position: relative;
 				a {
 					margin:0;
 					padding:10px 11px;
 					display: block;
 					color: #171717;
 					text-transform: uppercase;
+					font-weight: bold;
 				}
-			}
-			.category {
-				a {
+				.category {
 					&:before {
 						content: '';
 						width: 19px;
@@ -73,7 +98,6 @@ header{
 						vertical-align: middle;
 						display: inline-block;
 					}
-
 					&:after {
 						content: '';
 						width: 15px;
@@ -84,9 +108,140 @@ header{
 						display: inline-block;
 					}
 				}
+				.toogle-menu {
+					position: absolute;
+					width: 260px;
+					display: none;
+					z-index: 999;
+					top: 60px;
+
+					.list-menu {
+						border: 1px solid #dddfdf;
+						background: #fff;
+						border-radius: 2px;
+						box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.3);
+						padding: 15px 0;
+						li {
+							display: block;
+							a {
+								font-weight: normal;
+								text-transform: inherit;
+								padding: 10px 0 10px 37px;
+								font-size: 15px;
+								line-height:21px;
+								&:hover {
+									background: #e9e9ea;
+								}
+								&:before {
+									content: '';
+									border: 1px solid #cf9c59;
+									width: 7px;
+									height: 7px;
+									border-radius: 50%;
+									top: 16px;
+									left: 18px;
+									position: absolute;
+								}
+							}
+						}
+						.arrow-r {
+							a {
+								&:after {
+									content: '';
+									width: 15px;
+									height: 12px;
+									background: url(../img/sprite-icons.png) 47px 0;
+									position: absolute;
+									top: 15px;
+									right: 20px;
+									transform: rotate(-90deg);
+								}
+							}
+							.sub-list-menu {
+								@extend .list-menu;
+								width: 275px;
+								position: absolute;
+								top:0;
+								left: 261px;
+								display: none;
+								li {
+									strong {
+										font-size: 16px;
+										text-transform: uppercase;
+										padding: 0 18px;
+										margin: 10px 0 15px 0;
+										display: block;
+										color: #cb944c;
+									}
+									a {
+										&:after {
+											background: none;
+										}
+									}
+								}
+							}
+						}
+					}
+					&.expended {
+						display: block;
+					}
+				}
+			}
+		}
+		.tools-box {
+			padding: 7px 0 0 0;
+			text-align: right;
+			.basket {
+				.box {
+					overflow: hidden;
+					width: 26px;
+					height: 26px;
+					background: url(../img/sprite-icons.png) -65px 0;
+					float: left;
+				}
+				.count {
+					background: #cb944c;
+					border-radius: 50%;
+					width: 22px;
+					height: 20px;
+					color: #fff;
+					font-size: 12px;
+					text-align: center;
+					display: inline-block;
+					margin: 2px 3px 0 0;
+					line-height: 20px;
+				}
+				span {
+					text-transform: uppercase;
+					font-size: 13px;
+					color: #747688;
+					display: inline-block;
+					font-weight: bold;
+				}
+			}
+			.signin {
+				a {
+					color: #747688;
+					font-weight: bold;
+					font-size: 14px;
+					text-transform: uppercase;
+					&:before {
+						content: '';
+						overflow: hidden;
+						width: 28px;
+						height: 23px;
+						background: url(../img/sprite-icons.png) -34px 0;
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
 			}
 		}
 	}
+}
+
+.list-menu li:hover > .sub-list-menu {
+	display: block !important;
 }
 
 
