@@ -7,12 +7,63 @@
 
 @media screen and (max-width: 1200px) {
   .wrapper {
-    width: 1024px;
+    width: 990px;
   }
   @for $i from 1 through 12 {
     .standart-#{$i} {
       width: 8.333% * $i;
       float: left;
+    }
+  }
+
+
+  header {
+    .contact {
+      .contact-number {
+        font-size: 17px;
+        padding: 8px 5px 0 0;
+      }
+    }
+    .nav {
+      .main-menu {
+        li {
+          a {
+            padding: 10px 6px;
+            font-size: 11px;
+          }
+        }
+      }
+      .tools-box {
+        .basket {
+          span {
+            font-size: 10.5px;
+          }
+          .count {
+            margin: 2px 0;
+            line-height: 19px;
+            font-size: 11px;
+            width: 19px;
+            height: 18px;
+          }
+        }
+      }
+      .tools-box {
+        .signin {
+          a {
+            font-size: 12px;
+            &:before {
+              content: '';
+              width: 23px;
+              height: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    .description {
+      top: 55px !important;
     }
   }
 }
@@ -31,10 +82,77 @@
       float: left;
     }
   }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  header {
+    .logo {
+      a {
+        span {
+          font-size: 11px;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .search {
+      padding: 32px 0 0 15px;
+    }
 
+    .contact {
+      .contact-number {
+        font-size: 15px;
+        padding: 8px 5px 0 0;
+      }
+      .support {
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+    .nav {
+      padding: 0;
+      border: 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+
+      .main-menu {
+        padding: 7px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        li {
+          a {
+            padding: 10px 3px;
+            font-size: 12px;
+          }
+        }
+      }
+      .tools-box {
+        padding: 0 0 15px;
+        .basket {
+          span {
+            font-size: 12px;
+          }
+          .count {
+            font-size: inherit;
+            width: 22px;
+            height: 20px;
+            line-height: 21px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    .description {
+      top: 25px !important;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -48,7 +166,59 @@
     }
   }
 
+  header {
+    .logo {
+      a {
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .search {
+      padding: 32px 15px;
+    }
+    .nav {
+      border: 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
 
+      .main-menu {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 7px 0;
+        text-align: center;
+      }
+
+      .tools-box {
+        width: 245px;
+        padding: 10px 0;
+      }
+      }
+    .contact {
+      width: 310px;
+      float: right;
+      padding: 0;
+    }
+  }
+  .content {
+    .slider {
+      .slick-arrow {
+        height: 85px;
+      }
+    }
+    .description {
+      top: 40px !important;
+
+      p {
+        font-size: 25px !important;
+        line-height: 32px !important;
+        width: 357px !important;
+        padding: 3px 30px !important;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -56,6 +226,169 @@
     .xsmall-#{$i} {
       width: 8.333% * $i;
       float: left;
+    }
+  }
+  .main-wrapper {
+    min-width:100%;
+  }
+  header {
+    .logo {
+      text-align: center;
+      padding: 35px 0 0 0;
+    }
+    .contact {
+      float: none;
+      text-align: center;
+      margin: auto;
+      overflow: hidden;
+      width: 100%;
+    }
+    .nav {
+      .tools-box {
+        margin: auto;
+      }
+      .toogle-menu {
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 100%;
+        top: 35px;
+        .list-menu {
+          .arrow-r {
+            a {
+              &:after {
+                transform: inherit;
+              }
+            }
+            .sub-list-menu {
+              position: static !important;
+              width: 100% !important;;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    .description {
+      top: 19px !important;
+
+      p {
+        font-size: 19px !important;
+        line-height: 32px !important;
+        width: 273px !important;
+        padding: 3px 30px !important;
+        margin-left: 40px !important;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .wrapper {
+    min-width: 100%;
+  }
+  header {
+    .top {
+      display: block;
+      background: #f0f1f6;
+      .navbar-toggle {
+        .btn-toggle {
+          border: none;
+          display: inline-block;
+          width: 50px;
+          padding: 15px;
+          background: #3eade2;
+          cursor: pointer;
+
+          .line {
+            border-top: 2px solid #fff;
+            margin-bottom: 4px;
+            display: block;
+          }
+        }
+        .navbar-list {
+          display: inline-block;
+          li {
+            display: inline-block;
+            padding: 2px 13px;
+            a{
+              display: block;
+              width: 23px;
+              height: 22px;
+              background: url(../img/sprite-icons.png) 77px 21px;
+            }
+
+            &.icon2 {
+              a {
+                background: url(../img/sprite-icons.png) 17px 21px;
+              }
+            }
+            &.icon3 {
+              a {
+                background: url(../img/sprite-icons.png) 106px 21px;
+              }
+            }
+            &.icon4 {
+              a {
+                background: url(../img/sprite-icons.png) 141px 21px;
+              }
+            }
+            &.icon5 {
+              a {
+                background: url(../img/sprite-icons.png) 49px 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .logo {
+      padding:10px 0 0;
+    }
+    .row {
+      .search, .contact, .nav {
+        display: none;
+      }
+    }
+
+    .search {
+      padding: 15px 0 0;
+    }
+    .nav {
+      .main-menu {
+        text-align: left;
+        li {
+          display: block;
+        }
+      }
+      .tools-box {
+        padding: 20px 0 0;
+      }
+    }
+  }
+
+  .content {
+    .slider {
+      .description {
+        top: 11px !important;
+        p {
+          font-size: 15px !important;
+          color: #fff !important;
+          line-height: 21px !important;
+          width: 58% !important;
+          margin-left: 43px !important;
+          padding: 6px 30px !important;
+        }
+      }
+      .slick-arrow {
+        width: 19px;
+        height: 52px;
+        &:before {
+          transform: scale(.6);
+        }
+      }
     }
   }
 }

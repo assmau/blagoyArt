@@ -94,6 +94,16 @@ $(function(){
 		$('.toogle-menu').toggleClass('expended');
 	});
 
+	$('.btn-toggle').on('click', function() {
+		$('.nav').toggle();
+	});
+
+	$('.navbar-list .icon2').on('click', function() {
+		$('.search').toggle();
+	});
+
+
+
 	$('.slider').slick();
 
 });
