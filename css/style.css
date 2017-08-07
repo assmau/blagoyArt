@@ -561,6 +561,53 @@ h3 {
       margin-left: 60px;
       padding: 17px 30px;
       background: rgba(210, 166, 107, 0.9); }
+  .content .slider .slick-dots {
+    position: absolute;
+    bottom: -50px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center; }
+    .content .slider .slick-dots li {
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: 0 5px;
+      padding: 0;
+      cursor: pointer; }
+      .content .slider .slick-dots li.slick-active button:before {
+        opacity: 1;
+        background: #cb944c; }
+      .content .slider .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent; }
+        .content .slider .slick-dots li button:before {
+          font-family: slick;
+          font-size: 6px;
+          line-height: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 13px;
+          height: 13px;
+          content: "";
+          text-align: center;
+          background: #eedcc4;
+          border-radius: 50%;
+          color: black;
+          -webkit-font-smoothing: antialiased; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   body {
